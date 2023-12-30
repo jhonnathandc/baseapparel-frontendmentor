@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+}
+
+.header {
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: -1;
+  max-width: 61rem;
+}
+
+.image img {
+  object-fit: cover;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 16.1rem);
+}
+
+.main span {
+  font-size: 6.4rem;
+  font-weight: 300;
+  line-height: 6.4rem;
+  letter-spacing: 1.7321rem;
+  text-transform: uppercase;
+  color: #ce9898;
+}
+
+.main h1 {
+  font-size: 6.4rem;
+  font-weight: 600;
+  line-height: 7.1rem;
+  letter-spacing: 1.732rem;
+  text-transform: uppercase;
+  color: #423a3a;
+  max-width: 44.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.main p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  color: #ce9898;
+  max-width: 44.4rem;
+  margin-bottom: 4rem;
+}
+
+.main .form {
+  position: relative;
+  max-width: 44.4rem;
+  width: 100%;
+}
+
+.main .form label {
+  visibility: hidden;
+  position: absolute;
+}
+
+.main .form input {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #423a3a;
+
+  width: 100%;
+  padding: 1.4rem 3.2rem;
+  background: transparent;
+  border: 0.1rem solid #ce9898;
+  border-radius: 2.8rem;
+  outline: none;
+  position: relative;
+}
+
+.main .form input:focus {
+  border: 0.1rem solid #423a3a;
+}
+
+.main .form input::placeholder {
+  color: #ce9898;
+}
+
+.main .form::after {
+  content: "";
+  display: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url("./images/icon-error.svg");
+  position: absolute;
+  top: 50%;
+  right: 11.6rem;
+  transform: translateY(-50%);
+}
+
+.main .form .btn-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10rem;
+  height: 100%;
+  border-radius: 2.8rem;
+  border: none;
+  background-image: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+  box-shadow: 0px 15px 20px 0px rgba(198, 110, 110, 0.25);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.main .form .btn-form::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  border-radius: 2.8rem;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.main .form .btn-form:hover::after {
+  opacity: 0.5;
+}
+
+.main .form .info {
+  font-size: 1.3rem;
+  line-height: 2.8rem;
+  color: #f96464;
+  position: absolute;
+  bottom: -6.8rem;
+  left: 3.2rem;
+  display: none;
+}
+
+/* ========== ERROR ========== */
+.main .form.error input {
+  border: 0.2rem solid #f96464;
+}
+
+.main .form.error .info {
+  display: block;
+}
+
+.main .form.error::after {
+  display: block;
+}
+
+@media screen and (max-width: 1050px) {
+  .image {
+    max-width: 45rem;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .image {
+    max-width: 35rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .header {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .image {
+    position: relative;
+    height: 100%;
+    height: 45rem;
+    z-index: 1;
+  }
+
+  .image img {
+    object-fit: cover;
+    object-position: top;
+    height: 45rem;
+    width: 100vw;
+  }
+
+  .main {
+    align-items: center;
+    height: 100%;
+    margin-top: 6.4rem;
+    margin-bottom: 9.2rem;
+  }
+
+  .main span {
+    font-size: 4rem;
+    line-height: 4.2rem;
+    letter-spacing: 1.083rem;
+  }
+
+  .main h1 {
+    font-size: 4rem;
+    line-height: 4.2rem;
+    letter-spacing: 1.083rem;
+    text-align: center;
+    max-width: 31.1rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .main p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    max-width: 44.4rem;
+    margin-bottom: 3.2rem;
+    text-align: center;
+  }
+
+  .main .form input {
+    font-size: 1.4rem;
+    padding: 1rem 2.4rem;
+  }
+
+  .main .form .info {
+    bottom: -6.2rem;
+    left: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header img {
+    max-width: 10rem;
+  }
+
+  .image {
+    height: 25rem;
+  }
+
+  .image img {
+    height: 25rem;
+  }
+
+  .main .form::after {
+    right: 7.2rem;
+  }
+
+  .main .form .btn-form {
+    width: 6.4rem;
+  }
+}
